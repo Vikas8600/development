@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="sale_order_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name='partner_ids' widget="many2many_tags" editable='bottom'/>
+            </field>
+        </field>
+    </record>
+  </data>
+</odoo>
